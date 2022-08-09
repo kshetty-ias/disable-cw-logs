@@ -12,7 +12,7 @@ def update_cw_logs():
 
     prev = CW_LOGS
     print(f'Old: {CW_LOGS}')  
-    CW_LOGS = subprocess.check_output(['sh', './app.sh'])
+    CW_LOGS = subprocess.check_output(['sh', '../scripts/app.sh'])
     CW_LOGS = bool(int(CW_LOGS.decode('UTF-8')))
     print(f'New: {CW_LOGS}\n')
 
@@ -53,4 +53,5 @@ def toggle_logs():
         logger.error('!!!error message')
         logger.critical('!!!critical message')
 
+toggle_logs()
 periodic_fn()

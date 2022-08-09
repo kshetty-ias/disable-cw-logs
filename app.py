@@ -67,7 +67,6 @@ def toggle_logs(flag):
     
     return jsonify(out)
 
-
 logger = logging.getLogger(__name__)
 
 if (LOGGING == True):
